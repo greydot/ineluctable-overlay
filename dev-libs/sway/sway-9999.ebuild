@@ -30,8 +30,12 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-doc? ( app-text/asciidoc )
+	doc? ( app-text/asciidoc )
 "
+
+PATCHES=(
+	"${FILESDIR}/${PN}-swaybar-fix.patch"
+)
 
 src_configure() {
 	local emesonargs=(
